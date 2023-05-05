@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="inicio">
+                <img class="logo" src="imagenes/alura_logo.png">
+                <textarea  class="texto" id="text1" cols="30" rows="10"  placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <section class="aviso">
+            <img class="Vector" src="imagenes/Vector.png">
+            <p>Solo letras minúsculas y sin acentos</p>
+            </section>
+            <section class="boton">
+                <button id="encriptador" onclick="encriptar()" value="Enviar!">Encriptar</button>
+                <button id="desencriptar" onclick="desen()">Desencriptar</button>
+            </section>
+          
+            <textarea class="mensaje" id="text2" cols="20" rows="10"></textarea>
+            <div id="munheco">
+                <img class="munheco" src="imagenes/munheco.jpg">
+            </div>
+            <button id="copiar" class="boton" onclick="copyToClipboard()">Copiar</button>
+
+            <script>
+                function encriptar() {
+                    const text1 = document.getElementById("text1");
+                    const textValue = text1.value;
+                    let outputValue = "";
+                    for (let i = 0; i <textValue.length; i++) {
+                        const currentChar = textValue.charAt(i);
+
+                        if (currentChar === 'a') {
+                            outputValue += 'ai';
+                        } else if (currentChar === 'e') {
+                            outputValue += 'enter';
+                        } else if (currentChar === 'i') {
+                            outputValue += 'imes';
+                        } else if (currentChar === "o") {
+                            outputValue+= "ober";
+                        } else if (currentChar === "u") {
+                            outputValue += "ufat";
+                        } else {
+                        outputValue += currentChar;
+                        }
+                    }
+
+                    var texto = document.getElementById("text1").value;
+                    document.getElementById("text2").value=texto;
+                    const input2 = document.getElementById('text2');
+                    input2.value = outputValue;
+
+                    document.getElementById("munheco").style.display = "none";
+                    document.getElementById("text1").style.display = "none";
+            
+
+                }
+                function desen() {
+                    const text1 = document.getElementById("text1").value;
+                    let resultado = text1.replace(/ai/g, "a");
+                    resultado = resultado.replace(/enter/g, "e");
+                    resultado = resultado.replace(/imes/g, "i");
+                    resultado = resultado.replace(/ober/g, "o");
+                    resultado = resultado.replace(/ufat/g, "u");
+                    document.getElementById("text2").value = resultado;
+
+                    document.getElementById("munheco").style.display = "none";
+                    document.getElementById("text1").style.display = "none";
+
+                }
+
+                function copyToClipboard() {
+                    /* Obtener el contenido del input */
+                    var copyText = document.getElementById("text2");
+
+                    /* Seleccionar el texto en el input */
+                    copyText.select();
+
+                    /* Copiar el texto seleccionado al portapapeles */
+                    document.execCommand("copy");
+                }
+
+            </script>
+        </main>
+    </body>
+</html>
+

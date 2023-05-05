@@ -1,0 +1,252 @@
+/*Css para el fondo de la pagina*/
+*{
+    background: #E1E8F0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    margin: 40px 40px;
+    
+}
+
+.texto{
+    position: absolute;
+    width: 577px;
+    height:auto;
+    left: 240px;
+    top: 168px;
+    font-size: 32px;
+    line-height: 150%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.texto::-webkit-input-placeholder{
+    color: #363763;
+}
+
+.aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+}
+
+.vector{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+}
+
+p{
+    height: 18px;
+    width: 205px;
+    left: 24px;
+    top: 0px;
+    border-radius: nullpx;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(73, 80, 87, 1);
+
+
+}
+
+.boton{
+   
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+}
+
+
+#encriptador{
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    background: #6D6899;
+    border:none;
+    border-radius: 24px;
+    flex: none;
+    color: #FFFFFF;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#encriptador:hover{
+    background: #282751;
+    transform: scale(1.1);
+}
+
+#desencriptar{
+    /*box-sizing: border-box;*/
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    background: #DADAFE;
+    border: 1px solid #6D6899;
+    border-radius: 24px;
+    flex: none;
+    order: 1;
+    color: #363763;
+    transition: 1s all;
+    cursor: pointer;
+    
+}
+
+#desencriptar:hover{
+    background: #bcb4e1;
+    transform: scale(1.1);
+}
+
+.mensaje{
+    background: white;
+    border: none;
+    border-radius: 24px;
+    color: #363763;
+    position: absolute;
+    height: 944px;
+    left: 1030px;
+    top: 40px;
+    width:336px ;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.mensaje:focus{
+    outline: none;
+}
+
+.munheco{
+    background-color: white;
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 260px;
+}
+
+#input2{
+    position: absolute;
+    width: 336px;
+    height: 50px;
+    left: 1032px;
+    top: 100px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+#copiar{
+    position: absolute;
+    left: 1041px;
+    width:328px;
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+    background: #6D6899;
+    border:none;
+    border-radius: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    flex: none;
+    color: #FFFFFF;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#copiar:hover{
+    background: #282751;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:920px) {
+    .boton{
+        left: 80px;
+        top:713px;
+        width: 700px;
+    }
+    #encriptar, #desencriptar{
+        width: 320px;
+    }
+    .mensaje{
+        left: 45px;
+        top:800px;
+        width: 700px;
+        height: 250px;
+    }
+    #copiar{
+        left: 236px;
+        top: 1000px;
+    }
+
+    .munheco{
+        width: auto;
+        height: 220px;
+        top: 800px;
+        left: 275px;
+    }
+
+    .texto{
+        left: 125px;
+    }
+    .aviso{
+        left: 87px;
+        top: 680px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .boton{
+        left: 65px;
+        top: 780px;
+    }
+    .mensaje{
+        left: 35px;
+        top: 880px;
+        height: 450px;
+    }
+    #copiar{
+        left: 236px;
+        top: 1260px;
+    }
+
+    .munheco{
+        top: 900px;
+        width: 336px;
+        height: 304px;
+        left: 240px;
+    }
+
+    .texto{
+        left: 105px;
+        top: 160px;
+    }
+    .aviso{
+        left: 72px;
+        top: 755px;
+    }
+}
